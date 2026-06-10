@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Efecto de fondo neon */
+.neon-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(119, 198, 255, 0.1) 0%, transparent 50%);
+    z-index: -1;
+    animation: glowMove 8s ease-in-out infinite;
+}
+
+@keyframes glowMove {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+}
+
+/* Estilos para el login */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 90%;
+    max-width: 400px;
+}
+
+.neon-border {
+    border: 2px solid #00f3ff;
+    box-shadow: 
+        0 0 10px #00f3ff,
+        0 0 20px #00f3ff,
+        0 0 40px #00f3ff,
+        inset 0 0 10px #00f3ff;
+}
+
+.neon-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00f3ff;
+    text-shadow: 
+        0 0 10px #00f3ff,
+        0 0 20px #00f3ff;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.neon-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #00f3ff;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00f3ff;
+}
+
+.neon-input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #00f3ff;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.neon-input:focus {
+    outline: none;
+    box-shadow: 
+        0 0 10px #00f3ff,
+        inset 0 0 5px #00f3ff;
+}
+
+.neon-button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #00f3ff, #ff00ff);
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.neon-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 0 20px #00f3ff,
+        0 0 40px #ff00ff;
+}
+
+.error {
+    background: rgba(255, 0, 0, 0.2);
+    color: #ff4444;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #ff4444;
+    text-shadow: 0 0 5px #ff4444;
+}
+
+/* Estilos para el portafolio */
+.neon-header {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 2px solid #00f3ff;
+    box-shadow: 0 0 20px #00f3ff;
+}
+
+.neon-main-title {
+    color: #00f3ff;
+    text-shadow: 
+        0 0 10px #00f3ff,
+        0 0 20px #00f3ff,
+        0 0 40px #00f3ff;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.user-info {
+    color: #fff;
+    font-size: 16px;
+}
+
+.neon-text {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    font-weight: bold;
+}
+
+.neon-link {
+    color: #00f3ff;
+    text-decoration: none;
+    text-shadow: 0 0 5px #00f3ff;
+    transition: all 0.3s ease;
+}
+
+.neon-link:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para acordeones */
+.acordeon {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.neon-acordeon {
+    border: 2px solid #00f3ff;
+    box-shadow: 
+        0 0 15px #00f3ff,
+        inset 0 0 5px #00f3ff;
+}
+
+.acordeon input[type="checkbox"] {
+    display: none;
+}
+
+.acordeon-titulo {
+    background: linear-gradient(45deg, rgba(0, 243, 255, 0.1), rgba(255, 0, 255, 0.1));
+    color: #00f3ff;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00f3ff;
+    transition: all 0.3s ease;
+}
+
+.acordeon-titulo:hover {
+    background: linear-gradient(45deg, rgba(0, 243, 255, 0.2), rgba(255, 0, 255, 0.2));
+    text-shadow: 
+        0 0 15px #00f3ff,
+        0 0 30px #00f3ff;
+}
+
+.sub-titulo {
+    background: linear-gradient(45deg, rgba(255, 0, 255, 0.1), rgba(120, 119, 198, 0.1));
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    padding: 15px 20px;
+    font-size: 1.1em;
+}
+
+.sub-titulo:hover {
+    background: linear-gradient(45deg, rgba(255, 0, 255, 0.2), rgba(120, 119, 198, 0.2));
+    text-shadow: 
+        0 0 15px #ff00ff,
+        0 0 30px #ff00ff;
+}
+
+.acordeon-icon {
+    transition: transform 0.3s ease;
+}
+
+.acordeon input[type="checkbox"]:checked + .acordeon-titulo .acordeon-icon {
+    transform: rotate(180deg);
+}
+
+.acordeon-contenido {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.acordeon input[type="checkbox"]:checked ~ .acordeon-contenido {
+    max-height: 2000px;
+}
+
+.sub-acordeon .acordeon-contenido {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para tablas */
+.tabla-container {
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.neon-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.neon-table th {
+    background: linear-gradient(45deg, #00f3ff, #ff00ff);
+    color: #000;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.neon-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 243, 255, 0.3);
+    color: #fff;
+}
+
+.neon-table tr:hover {
+    background: rgba(0, 243, 255, 0.1);
+}
+
+.neon-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ESTILOS PARA EXÁMENES (SIN PARPADEO)*/
+.examenes-acordeon {
+    border: 2px solid #ff00ff;
+    box-shadow: 
+        0 0 15px #ff00ff;
+}
+
+.examenes-titulo {
+    background: linear-gradient(45deg, rgba(255, 0, 255, 0.2), rgba(255, 215, 0, 0.2));
+    color: #ff00ff;
+    text-shadow: 
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff;
+}
+
+.examenes-titulo:hover {
+    background: linear-gradient(45deg, rgba(255, 0, 255, 0.3), rgba(255, 215, 0, 0.3));
+    text-shadow: 
+        0 0 15px #ff00ff;
+        /*0 0 30px #ff00ff;*/
+}
+
+/* Efecto especial para la tabla de exámenes */
+.examenes-acordeon .neon-table {
+    border: 1px solid #ff00ff;
+    box-shadow: 
+        0 0 10px #ff00ff,
+        inset 0 0 5px #ff00ff;
+}
+
+.examenes-acordeon .neon-table th {
+    background: linear-gradient(45deg, #ff00ff, #ff69b4);
+    color: #000;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.examenes-acordeon .neon-table tr:hover {
+    background: rgba(255, 0, 255, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-container {
+        margin: 20px;
+        padding: 30px 20px;
+    }
+    
+    .neon-main-title {
+        font-size: 1.8em;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    .acordeon-titulo {
+        padding: 15px;
+        font-size: 1.1em;
+    }
+    
+    .neon-table th,
+    .neon-table td {
+        padding: 10px;
+    }
+}
