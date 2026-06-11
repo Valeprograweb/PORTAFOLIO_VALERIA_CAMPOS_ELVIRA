@@ -6,7 +6,7 @@ package hoteltransilvania;
 import java.util.Scanner;
 /**
  *
- * @author 187229
+ * @author Valeria Campos Elvira
  */
 public class HotelTransilvania {
 
